@@ -1,45 +1,48 @@
-package com.example.mynewsapp // PENTING: Sesuaikan ini dengan nama package Anda sendiri!
+package com.example.mynewsapp
 
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
 import retrofit2.http.GET
 import retrofit2.http.Query
 
-// --- 1. MODEL DATA ---
-// Ini adalah bentuk data yang kita harapkan dari Internet (NewsAPI)
+// --- 1. MODEL DATA LENGKAP ---
 data class NewsResponse(
     val articles: List<Article>
 )
 
 data class Article(
-    val title: String?,       // Judul Berita
-    val description: String?, // Ringkasan
-    val urlToImage: String?,  // Link Gambar
-    val publishedAt: String?  // Tanggal
+    val source: Source?,      // Info Sumber (CNN, BBC, dll)
+    val author: String?,      // Nama Penulis
+    val title: String?,
+    val description: String?,
+    val url: String?,         // Link asli untuk tombol "Baca Selengkapnya"
+    val urlToImage: String?,
+    val publishedAt: String?,
+    val content: String?      // Isi berita (biasanya potongan paragraf awal)
+)
+
+data class Source(
+    val id: String?,
+    val name: String?
 )
 
 // --- 2. API SERVICE ---
-// Ini adalah daftar alamat/link yang akan kita panggil
 interface NewsApiService {
-    // 1. Untuk Berita Utama (Yang sudah ada)
     @GET("v2/top-headlines")
     suspend fun getTopHeadlines(
         @Query("country") country: String = "us",
         @Query("apiKey") apiKey: String
     ): NewsResponse
 
-    // 2. TAMBAHAN BARU: Untuk Pencarian
     @GET("v2/everything")
     suspend fun searchNews(
-        @Query("q") query: String, // 'q' adalah kata kunci pencarian
+        @Query("q") query: String,
         @Query("apiKey") apiKey: String
     ): NewsResponse
 }
 
-// --- 3. RETROFIT INSTANCE ---
-// Ini adalah "mesin" yang menghubungkan aplikasi ke internet
+// --- 3. RETROFIT ---
 object RetrofitClient {
-    // Alamat utama NewsAPI
     private const val BASE_URL = "https://newsapi.org/"
 
     val apiService: NewsApiService by lazy {
