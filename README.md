@@ -5,7 +5,16 @@ Aplikasi baca berita modern berbasis Android yang dibangun menggunakan **Kotlin*
 Proyek ini dibuat untuk memenuhi Tugas Akhir Mata Pelajaran Pemrograman Mobile.
 
 ## 📸 Screenshot Aplikasi
+
+(Night Mode Dashboard)
 ![WhatsApp Image 2025-11-26 at 12 06 29_51ca7cae](https://github.com/user-attachments/assets/90972981-4307-43f9-ad7c-70ffffc74746)
+
+(Day Mode Dashboard)
+![WhatsApp Image 2025-11-26 at 12 08 19_6f65c0f7](https://github.com/user-attachments/assets/3050cf69-50e7-48af-bf8a-89cbac1f1479)
+
+
+(News Details)
+![WhatsApp Image 2025-11-26 at 12 09 24_5cf9eb09](https://github.com/user-attachments/assets/640a6211-7875-4ba3-b49a-4db35d304fc0)
 
 
 ## ✨ Fitur Unggulan
@@ -26,8 +35,7 @@ Mendukung tema gelap otomatis (*System Default*) dengan palet warna yang nyaman 
 * **Portrait:** Tampilan list vertikal standar.
 * **Landscape:** Tampilan list berubah menjadi layout menyamping (Gambar di kiri, Teks di kanan) agar lebih rapi dan tidak terpotong.
 
-### 5. 🔗 Fitur Berbagi (Share)
-Terdapat tombol **Share** pada setiap kartu berita untuk membagikan link berita langsung ke WhatsApp, Telegram, atau media sosial lainnya.
+* 
 
 ## 🛠️ Teknologi yang Digunakan
 
@@ -55,8 +63,8 @@ Terdapat tombol **Share** pada setiap kartu berita untuk membagikan link berita 
 
 ## 👤 Identitas Pembuat
 
-* **Nama:** [Tulis Nama Lengkap Anda Di Sini]
-* **Kelas:** [Tulis Kelas Anda, Misal: XII RPL 1]
+* **Nama:** Febrian Bayu Putranto
+* **Kelas:** XII.RPL/12
 * **Sekolah:** SMKN 6 Surakarta
 * **Tahun:** 2025
 
